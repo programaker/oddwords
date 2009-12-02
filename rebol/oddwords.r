@@ -1,5 +1,8 @@
-REBOL [Title: "Odd Words"]
+REBOL [Title: "oddwords"]
 
+; rebol has 1-based-index collections
+; to make this version consistent with the ones in 0-based-index languages,
+; i've wrote this function to behave like them 
 oddwords: func [phrase] [
     text: copy phrase
     words: parse text none
@@ -11,7 +14,3 @@ oddwords: func [phrase] [
     
     text
 ]
-
-print oddwords "foo"
-print oddwords "this is a simple phrase"
-print oddwords "rebol is so cool"
